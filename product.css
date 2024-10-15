@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #333;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #333;
+}
+
+.logout-form {
+    float: right;
+    margin-top: 10px;
+}
+
+.logout-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-form button:hover {
+    background-color: #333;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}

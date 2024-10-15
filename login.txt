@@ -1,0 +1,41 @@
+CREATE TABLE products (
+    productID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    productname VARCHAR(255) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    description TEXT NOT NULL,
+    stock INT(11) NOT NULL
+);
+
+CREATE TABLE cart (
+    cartID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    customerID INT(11),
+    productID INT(11),
+    quantity INT(11),
+    FOREIGN KEY (customerID) REFERENCES customers(customerID),
+    FOREIGN KEY (productID) REFERENCES products(productID)
+);
+
+
+CREATE TABLE shippers (
+    shipperID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    shippername VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE orders (
+    orderID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    customerID INT(11),
+    shipperID INT(11),
+    total DECIMAL(10,2),
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (customerID) REFERENCES customers(customerID),
+    FOREIGN KEY (shipperID) REFERENCES shippers(shipperID)
+);
+CREATE TABLE customers (
+    customerID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    customername VARCHAR(100) NOT NULL,
+    contactname VARCHAR(100) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    contactnumber VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
